@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Docker (preferable latest sable version)
+- Docker (preferable latest stable version)
 
 ## Running it
 
