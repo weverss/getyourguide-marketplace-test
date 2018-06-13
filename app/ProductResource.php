@@ -39,7 +39,7 @@ class ProductResource {
                 $numberOfTravelers
             );
 
-            if (!$isProductAvailable) {
+            if ($isProductAvailable) {
                 $availableProducts[] = $product;
             }
         }
@@ -66,7 +66,7 @@ class ProductResource {
             $product['activity_start_datetime']
         );
 
-        if ($productStartTime < $requestedStartTime) {
+        if ($productStartTime < $requestedStartTime || $productStartTime > $requestedEndTime) {
             return false;
         }
 
